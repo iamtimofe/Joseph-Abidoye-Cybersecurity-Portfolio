@@ -30,7 +30,6 @@ Downloaded and installed VirtualBox to host multiple virtual machines.
 
 ### 4️⃣ Configured Network (Bridged Mode)
 - Set both VMs to use Bridged Adapter demonstrate real network communication
-- Verified IP addresses using:
-- ```bash
+- Verified IP addresses using:```bash
 ip a
 ```
