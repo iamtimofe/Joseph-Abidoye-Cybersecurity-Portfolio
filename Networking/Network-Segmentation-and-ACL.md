@@ -1,4 +1,5 @@
 # 📡 Secure Branch Office Network Design – VLAN Segmentation, Inter-VLAN Routing & ACLs
+> This project demonstrates practical implementation of network segmentation and access control using Cisco Packet Tracer, simulating a secure enterprise branch office environment.
 
 ## 🎯 Objective
 To design and simulate a secure branch office infrastructure using Cisco Packet Tracer, implementing VLAN segmentation, inter-VLAN routing, and Access Control Lists (ACLs).
