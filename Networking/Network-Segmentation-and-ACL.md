@@ -42,6 +42,10 @@ VLAN segmentation reduces this risk by isolating departments and limiting access
 
 Each VLAN was assigned a default gateway on the router.
 
+## 🗺️ Network Topology
+
+![Network Topology](Screenshots/topology-diagram.png)
+
 ---
 
 ## 🔌 Access Port Configuration (Switch CLI)
@@ -79,9 +83,6 @@ Traffic flow:
 3. ACL determines whether traffic is allowed or denied.
 
 ---
-## 🗺️ Network Topology
-
-![Network Topology](Screenshots/topology-diagram.png)
 
 ## 🔀 Trunk Port Configuration
 
