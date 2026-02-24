@@ -138,8 +138,7 @@ Result: Destination host unreachable (Access Denied)
 
 ## 📸 Evidence of ACL Enforcement
 
-![ACL Verification](<img width="233" height="197" alt="after acl" src="https://github.com/user-attachments/assets/9ba0f028-7872-42c7-933f-7ffab63f8059" />
-.png)
+![ACL Verification](../Screenshots/acl-verification.png)
 
 ---
 
