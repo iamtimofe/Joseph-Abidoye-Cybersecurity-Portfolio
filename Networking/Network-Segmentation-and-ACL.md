@@ -79,6 +79,9 @@ Traffic flow:
 3. ACL determines whether traffic is allowed or denied.
 
 ---
+## 🗺️ Network Topology
+
+![Network Topology](Screenshots/topology-diagram.png)
 
 ## 🔀 Trunk Port Configuration
 
