@@ -39,7 +39,7 @@ openssl enc -aes-256-cbc -salt -in ssl.txt -out encrypted.bin -pass file:secret.
 ```bash
 openssl enc -d -aes-256-cbc -salt -in encrypted.bin -out decrypted.txt -pass file:secret.key
 ```
-![Symmetric Encryption](Screenshots/symmetric-encryption.png)
+![Symmetric Encryption](Screenshots/symmetric-encryption.png.png)
 
 ## 📚 Observation
 
@@ -71,7 +71,7 @@ openssl pkeyutl -encrypt -inkey public.pem -pubin -in Message.txt -out encrypted
 ```bash
 openssl pkeyutl -decrypt -inkey private.pem -in encrypted_Message.bin
 ```
-![Asymmetric Encryption](Screenshots/rsa-encryption.png)
+![Asymmetric Encryption](Screenshots/rsa-encryption.png.png)
 
 ## 📚 Observation
 
@@ -86,7 +86,7 @@ openssl pkeyutl -decrypt -inkey private.pem -in encrypted_Message.bin
 
 ## 📡 Captured Traffic
 ![HTTP Traffic Monitoring
-](Screenshots/http-readable.png)
+](Screenshots/http-readable.png.png)
 
 Filtered HTTP traffic:
 
@@ -121,7 +121,7 @@ Filtered TCP stream:
 tcp.stream eq X
 ```
 ![HTTPS Traffic Monitoring
-](Screenshots/https-encrypted.png)
+](Screenshots/https-encrypted.png.png)
 Observed:
 
 - TLS handshake
