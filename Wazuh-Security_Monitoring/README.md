@@ -27,7 +27,7 @@ This project demonstrates how Wazuh can be used to identify and analyze security
 - **Compliance Relevance:** Supports PCI DSS Requirement 11.5 — “Deploy file integrity monitoring tools to alert personnel to unauthorized modification of critical system files.”
 
 ## Reflection
-This exercise demonstrates how SIEM tools like Wazuh provide visibility into system changes, enabling proactive compliance and threat detection.
+This exercise demonstrates how SIEM tools like Wazuh provides visibility into system changes, enabling proactive compliance and threat detection.
 
 ## Screenshots
 ![Dashboard Overview](Images/Dashboard.png)  
