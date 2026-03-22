@@ -50,7 +50,7 @@ Key Components Implemented:
   - **Importance:** File integrity monitoring is critical for compliance frameworks (e.g., PCI DSS, ISO 27001). Detecting unauthorized changes helps prevent insider threats, malware persistence, and data tampering.
 
 📂 View Project:  
-➡️ [Wazuh Security Monitoring Project](Wazuh-Security-Monitoring/README.md)
+➡️ [Wazuh Security Monitoring Project](Wazuh-Security_Monitoring/README.md)
 
 ---
 
