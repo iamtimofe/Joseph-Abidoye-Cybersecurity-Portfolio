@@ -1,5 +1,7 @@
 # Wazuh Security Monitoring and Compliance
 
+## Scenario# Wazuh Security Monitoring and Compliance
+
 ## Scenario
 Utilizing a Security Information and Event Management (SIEM) tool is critical for real-time threat detection.  
 This project demonstrates how Wazuh can be used to identify and analyze security events.
@@ -26,3 +28,8 @@ This project demonstrates how Wazuh can be used to identify and analyze security
 
 ## Reflection
 This exercise demonstrates how SIEM tools like Wazuh provide visibility into system changes, enabling proactive compliance and threat detection.
+
+## Screenshots
+![Dashboard Overview](images/dashboard.png)  
+![File Integrity Alert](images/file_integrity_alert.png)  
+![Event Log](images/event_log.png)
