@@ -30,6 +30,7 @@ This project demonstrates how Wazuh can be used to identify and analyze security
 This exercise demonstrates how SIEM tools like Wazuh provide visibility into system changes, enabling proactive compliance and threat detection.
 
 ## Screenshots
-![Dashboard Overview](images/dashboard.png)  
-![File Integrity Alert](images/file_integrity_alert.png)  
-![Event Log](images/event_log.png)
+![Dashboard Overview](Images/Dashboard.png)  
+![File Integrity](Images/file_integrity.png)
+![File Integrity Alert](Images/file_integrity_alert.png)  
+![Event Log](Images/event_log.png)
