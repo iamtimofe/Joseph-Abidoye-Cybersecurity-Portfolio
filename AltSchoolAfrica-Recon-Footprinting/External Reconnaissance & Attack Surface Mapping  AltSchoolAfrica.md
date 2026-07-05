@@ -38,11 +38,17 @@ Perform the reconnaissance and footprinting phase of a security assessment again
 - Amass scan — command and output: [`screenshots/Amass01.png`](screenshots/Amass01.png)
 - Amass scan — command and output: [`screenshots/Amass02.png`](screenshots/Amass02.png)
 - Amass raw output file: [`outputs/amass_output.txt`](outputs/amass_output.txt)
-- Recon-ng scan — command and output: [`screenshots/recon-ng-scan.png`](screenshots/recon-ng-scan.png)
-- WHOIS scan output: [`screenshots/whois-scan.png`](screenshots/whois-scan.png)
-- dig commands (A/MX/TXT/CNAME) output: [`screenshots/dig-records.png`](screenshots/dig-records.png)
-- theHarvester raw output file: [`outputs/theharvester_output.txt`](outputs/theharvester_output.txt)
-- Google Dorking results: [`screenshots/google-dorking.png`](screenshots/google-dorking.png)
+- Recon-ng scan — command and output: [`screenshots/Recon1.png`](screenshots/Recon1.png)
+- Recon-ng scan — command and output: [`screenshots/Recon3.png`](screenshots/Recon3.png)
+- Recon-ng scan — command and output: [`screenshots/Recon6.png`](screenshots/Recon6.png)
+- WHOIS scan output: [`screenshots/WHOis.png`](screenshots/WHOis.png)
+- dig commands (A) output: [`screenshots/Dig%20A.png`](screenshots/Dig%20A.png)
+- dig commands (MX) output: [`screenshots/Dig%20MX.png`](screenshots/Dig%20MX.png)
+- dig commands (TXT) output: [`screenshots/Dig%20TXT.png`](screenshots/Dig%20TXT.png)
+- dig commands (CNAME) output: [`screenshots/Dig%20CNMAE.png`](screenshots/Dig%20CNAME.png)
+- theHarvester raw output file: [`outputs/theHarvester_results.txt`](outputs/theHarvester_results.txt)
+- Google Dorking results: [`screenshots/public%20asset%20discovery.png`](screenshots/public%20asset%20discovery.png)
+
 
 ### Key Findings
 
@@ -67,10 +73,9 @@ Perform the reconnaissance and footprinting phase of a security assessment again
 
 ### Evidence
 
-- Host discovery scan: [`screenshots/nmap-host-discovery.png`](screenshots/nmap-host-discovery.png)
-- Full port/version scan: [`screenshots/nmap-full-scan.png`](screenshots/nmap-full-scan.png)
-- Full port scan raw output: [`outputs/nmap_scans.txt`](outputs/nmap_scans.txt)
-- Aggressive scan: [`screenshots/nmap-aggressive-scan.png`](screenshots/nmap-aggressive-scan.png)
+  ![Host Delivery Scan](screenshots/nmap1.png)
+  ![Full Port/Version Sacn](screenshots/nmap2.png)
+  ![Aggressive Scan](screenshots/nmap3.png)
 - Aggressive scan raw output: [`outputs/nmap_aggressive.txt`](outputs/nmap_aggressive.txt)
 
 ### Discovered Services (summary)
@@ -81,8 +86,7 @@ All open ports on the resolved IP (`104.21.37.155`) fronted by **Cloudflare's HT
 
 Built a Data Flow Diagram (DFD) mapping external actors (users, third-party merchants) through entry points (API gateway, web app, SSH, mail server) → Cloudflare CDN/proxy → backend microservices/datastores (learning platform, user database, course data, payment services).
 
-- Attack Surface DFD (image): [`diagrams/attack-surface-dfd.png`](diagrams/attack-surface-dfd.png)
-- Attack Surface DFD (editable source): [`diagrams/attack-surface-dfd.drawio`](diagrams/attack-surface-dfd.drawio)
+- Attack Surface DFD (image): [`screenhots/attack-surface-dfd.png`](screenhots/attack-surface-dfd.png)
 
 ### Target Prioritization
 
