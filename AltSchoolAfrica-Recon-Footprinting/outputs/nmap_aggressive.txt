@@ -1,0 +1,43 @@
+# Nmap 7.99 scan initiated Wed Jun 17 10:16:19 2026 as: /usr/lib/nmap/nmap --privileged -A -oN outputs/nmap_aggresive.txt altschoolafrica.com
+Nmap scan report for altschoolafrica.com (104.21.37.155)
+Host is up (0.11s latency).
+Other addresses for altschoolafrica.com (not scanned): 172.67.210.81 2606:4700:3033::6815:259b 2606:4700:3033::ac43:d251
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Cloudflare http proxy
+|_http-server-header: cloudflare
+|_http-title: Site doesn't have a title (text/plain).
+443/tcp  open  ssl/http Cloudflare http proxy
+|_http-server-header: cloudflare
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+|_http-title:  AltSchool Africa | Learn In-Demand Tech Skills &amp; Launch Y...
+8080/tcp open  http     Cloudflare http proxy
+|_http-server-header: cloudflare
+8443/tcp open  ssl/http Cloudflare http proxy
+|_http-server-header: cloudflare
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Apple iOS 14.0 - 15.6 or tvOS 14.3 - 16.1 (Darwin 20.0.0 - 22.1.0) (89%), Apple macOS 11 (Big Sur) - 13 (Ventura) or iOS 16 (Darwin 20.6.0 - 22.4.0) (89%), Apple macOS 14.3 (Sonoma) (Darwin 23.3.0) (89%), Apple macOS 26.1 (Tahoe) (Darwin 25.1.0) (89%), FreeBSD 11.0-STABLE (89%), Apple iOS 17 (88%), Apple iOS 15.7 (Darwin 21.7.0) (88%), Apple iOS 26.1 (88%), Apple macOS 14.6 (Sonoma) (Darwin 23.6.0) (88%), FreeBSD 11.1-STABLE (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 10 hops
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   6.39 ms   192.168.100.1
+2   10.40 ms  10.10.87.1
+3   10.49 ms  102.216.203.5
+4   100.97 ms hu0-4-0-3.ccr21.lon02.atlas.cogentco.com (149.14.250.145)
+5   105.50 ms be9654.ccr81.lon05.atlas.cogentco.com (154.54.74.141)
+6   105.59 ms be9660.rcr71.b015533-1.lon05.atlas.cogentco.com (154.54.75.6)
+7   ... 9
+10  133.79 ms 104.21.37.155
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jun 17 10:18:14 2026 -- 1 IP address (1 host up) scanned in 114.53 seconds
