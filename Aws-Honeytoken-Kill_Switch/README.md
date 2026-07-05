@@ -1,4 +1,4 @@
-# AWS Honeytoken Detection & Automated Kill-Switch
+# AWS Honeytoken Detection & Automated Kill-Switch.
 
 **Category:** Cloud Security | Threat Detection & Automated Response
 **Platform:** AWS (eu-north-1)
