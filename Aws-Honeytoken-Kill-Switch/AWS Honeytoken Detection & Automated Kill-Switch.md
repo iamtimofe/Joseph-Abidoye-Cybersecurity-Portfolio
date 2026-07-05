@@ -20,7 +20,7 @@
 
 ## Objective
 
-Build a cloud security monitoring setup that detects unauthorized access to sensitive credentials and automatically contains the threat — without a human in the loop — using a honeytoken as bait.
+Build a cloud security monitoring setup that detects unauthorized access to sensitive credentials and automatically contains the threat without a human in the loop using a honeytoken as bait.
 
 ## Architecture
 
@@ -31,7 +31,7 @@ CloudTrail logs all API activity (multi-region) → S3 + CloudWatch Logs → Clo
 CloudTrail events → EventBridge rule matches `GetSecretValue` on the honeytoken directly → fires two targets in parallel: SNS (email alert) + Lambda (kill-switch).
 
 **Automated Response:**
-Lambda function (`Joseph_Lambda_Function`) is triggered by the EventBridge rule, uses the IAM API (`DetachUserPolicy`) to strip all permissions from the offending user — quarantining them in near real-time.
+Lambda function (`Joseph_Lambda_Function`) is triggered by the EventBridge rule, uses the IAM API (`DetachUserPolicy`) to strip all permissions from the offending user quarantining them in near real-time.
 
 ## Tools & Services Used
 
@@ -59,15 +59,24 @@ Lambda function (`Joseph_Lambda_Function`) is triggered by the EventBridge rule,
 - IAM console screenshot confirming zero attached policies on `Victim_IAM_User` post-kill-switch.
 - Follow-up CloudTrail log showing `AccessDenied` when the quarantined user attempted `ListBuckets` — proof the kill-switch held.
 
-*(Screenshots: `/screenshots/` — see below for what to include)*
+![CloudWatch Alarm Config](screenshots/CloudWatch%20alarm%20config.png)
+![EventBridge Rule Config](screenshots/EventBriged%20rule%20config.png)
+![Alert Flow 1](screenshots/Alert.png)
+![Alert Flow 2](screenshots/AlertFlow%202.png)
+![Alarm](screenshots/Alarm.png)
+![Access Denied](screenshots/Access%20Denied.png)
+![Zero Policy](screenshots/Zero%20Policy.png)
+![AccessDenied Logs](screenshots/AccessDenied%20Logs.png)
+
+
 
 ## Security Analysis
 
 **Detection speed:** EventBridge reacted within seconds of the honeytoken being accessed, since it consumes CloudTrail events directly. CloudWatch's metric-filter path lagged by roughly 3–5 minutes due to log ingestion, metric evaluation, and alarm state-change delays.
 
-**Alert quality:** The EventBridge-driven alert carried more forensic detail out of the box — exact IAM username, event time, and source IP — versus the more generic CloudWatch alarm notification.
+**Alert quality:** The EventBridge-driven alert carried more forensic detail out of the box, exact IAM username, event time, and source IP — versus the more generic CloudWatch alarm notification.
 
-**Compliance angle:** This design maps to NIST continuous monitoring expectations — CloudTrail provides full audit coverage, CloudWatch/EventBridge provide near-real-time detection, and the Lambda kill-switch provides the automated response leg.
+**Compliance angle:** This design maps to NIST continuous monitoring expectations  CloudTrail provides full audit coverage, CloudWatch/EventBridge provide near-real-time detection, and the Lambda kill-switch provides the automated response leg.
 
 ## Lessons Learned
 
