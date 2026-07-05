@@ -35,7 +35,8 @@ Perform the reconnaissance and footprinting phase of a security assessment again
 
 ### Evidence
 
-- Amass scan — command and output: [`screenshots/amass-scan.png`](screenshots/amass-scan.png)
+- Amass scan — command and output: [`screenshots/Amass01.png`](screenshots/Amass01.png)
+- Amass scan — command and output: [`screenshots/Amass02.png`](screenshots/Amass02.png)
 - Amass raw output file: [`outputs/amass_output.txt`](outputs/amass_output.txt)
 - Recon-ng scan — command and output: [`screenshots/recon-ng-scan.png`](screenshots/recon-ng-scan.png)
 - WHOIS scan output: [`screenshots/whois-scan.png`](screenshots/whois-scan.png)
