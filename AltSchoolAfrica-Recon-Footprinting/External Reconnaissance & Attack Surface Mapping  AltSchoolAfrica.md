@@ -1,4 +1,4 @@
-# External Reconnaissance & Attack Surface Mapping — AltSchoolAfrica
+# External Reconnaissance & Attack Surface Mapping - AltSchoolAfrica
 
 **Category:** Offensive Security | OSINT & Reconnaissance
 **Platform:** Kali Linux VM
