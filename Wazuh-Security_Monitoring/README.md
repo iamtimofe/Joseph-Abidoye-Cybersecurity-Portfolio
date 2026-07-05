@@ -1,6 +1,6 @@
 # Wazuh Security Monitoring and Compliance
 
-## Scenario# Wazuh Security Monitoring and Compliance
+## Scenario Wazuh Security Monitoring and Compliance
 
 ## Scenario
 Utilizing a Security Information and Event Management (SIEM) tool is critical for real-time threat detection.  
