@@ -1,0 +1,292 @@
+Read proxies.yaml from /etc/theHarvester/proxies.yaml
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.10.1                                             *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+
+[*] Target: altschoolafrica.com 
+
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Failed to process bevigil search for word: 'altschoolafrica.com'
+Error Message: 
+[!] Missing API key for bevigil. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+
+[!] Missing API key for Bitbucket. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Failed to process bufferoverun search for word: 'altschoolafrica.com'
+Error Message: 
+[!] Missing API key for bufferoverun. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Failed to perform BuiltWith search for word: 'altschoolafrica.com'
+A Missing Key Error occurred in builtwith: 
+[!] Missing API key for BuiltWith. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Failed to process brave search for word: 'altschoolafrica.com'
+Error Message: 
+[!] Missing API key for Brave Search. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Censys API key is missing or invalid: 
+[!] Missing API key for Censys ID and/or Secret. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing key error occurred in criminalip: 
+[!] Missing API key for criminalip. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in dehashed: 
+[!] Missing API key for Dehashed. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+
+[!] Missing API key for DNSDumpster. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in fullhunt: 
+[!] Missing API key for fullhunt. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Error initializing SearchGithubCode: 
+[!] Missing API key for Github. 
+A Missing Key error occurred in github-code: 
+[!] Missing API key for Github. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+
+[!] Missing API key for HaveIBeenPwned. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in Hunter: 
+[!] Missing API key for Hunter. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in Hunter How: 
+[!] Missing API key for hunterhow. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in intelx: 
+[!] Missing API key for Intelx. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in Netlas: 
+[!] Missing API key for netlas. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Unexpected error occurred in Onyphe module: 
+[!] Missing API key for onyphe. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in PentestTools search: 
+[!] Missing API key for PentestTools. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in ProjectDiscovery: 
+[!] Missing API key for ProjectDiscovery. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in RocketReach: 
+[!] Missing API key for RocketReach. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+
+[!] Missing API key for SecurityScorecard. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred Security Trails: 
+[!] Missing API key for Securitytrail. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in Tomba: 
+[!] Missing API key for Tomba Key and/or Secret. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in venacus search: 
+[!] Missing API key for Venacus. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in whoisxml search: 
+[!] Missing API key for whoisxml. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+A Missing Key error occurred in zoomeye: 
+[!] Missing API key for zoomeye. 
+Chaos API error: get access token here https://cloud.projectdiscovery.io
+[*] Searching Chaos. 
+	Searching results.
+[*] Searching Certspotter. 
+[*] Searching Baidu. 
+Exception occurred: Expected object or value
+[*] Searching Duckduckgo. 
+Fofa API error: [-700] 账号无效
+Failed to parse Fofa response: 
+[!] Missing API key for Fofa API (Invalid credentials). 
+[*] Searching Fofa. 
+[*] Searching Gitlab. 
+[*] Searching Commoncrawl. 
+[*] Searching Hackertarget. 
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+[*] Searching Hudsonrock. 
+[*] Searching Leaklookup. 
+LeakIX API requires authentication: "Incorrect API Key"
+[*] Searching Otx. 
+[*] Searching Leakix. 
+[*] Searching Rapiddns. 
+	Searching Shodan for 172.67.210.81
+172.67.210.81: Not in Shodan
+172.67.210.81: Not in Shodan
+[*] Searching Shodan. 
+[*] Searching CRTsh. 
+[*] Searching Subdomaincenter. 
+[*] Searching Robtex. 
+No response from ThreatCrowd API for: altschoolafrica.com
+[*] Searching Threatcrowd. 
+[*] Searching Thc. 
+[*] Searching Subdomainfinderc99. 
+[*] Searching Urlscan. 
+[*] Windvane API key not found. Using limited unauthenticated access.
+[*] API unavailable, using fallback subdomain pattern search...
+[*] Searching Waybackarchive. 
+[*] Searching Virustotal. 
+[*] Searching Yahoo. 
+[*] Found 3 subdomains using DNS fallback
+[*] Searching Windvane. 
+
+[*] ASNS found: 2
+--------------------
+AS13335
+AS16509
+
+[*] Interesting Urls found: 9
+--------------------
+https://altschoolafrica.com/
+https://altschoolafrica.com/launchpad
+https://appl-staging.altschoolafrica.com/
+https://backend-payment.prod.altschoolafrica.com/
+https://backend-payments.stage.altschoolafrica.com/
+https://courses.altschoolafrica.com/
+https://data.altschoolafrica.com/
+https://learn.altschoolafrica.com/
+https://learn.altschoolafrica.com/membership/
+
+[*] No LinkedIn users found.
+
+
+
+[*] LinkedIn Links found: 0
+---------------------
+
+[*] IPs found: 14
+-------------------
+104.21.37.155
+162.159.129.73
+162.159.130.73
+172.67.210.81
+18.224.51.77
+2606:4700:3033::ac43:d251
+2606:4700:7::a29f:8249
+2606:4700:7::a29f:862a
+3.125.252.47
+3.19.244.130
+
+[*] No emails found.
+
+[*] No people found.
+
+[*] Hosts found: 87
+---------------------
+*.altschoolafrica.com
+*.assessment.altschoolafrica.com
+*.bga.altschoolafrica.com
+*.bmp.altschoolafrica.com
+*.courses.altschoolafrica.com
+*.learn.altschoolafrica.com
+3mtt.altschoolafrica.com
+3mtt.altschoolafrica.com:162.159.130.73
+actors.altschoolafrica.com
+ailearning.altschoolafrica.com
+ailearning.altschoolafrica.com:172.67.210.81
+altschool-backend-actors.stage.altschoolafrica.com
+api-gateway.altschoolafrica.com
+appl-api.altschoolafrica.com
+appl-staging.altschoolafrica.com
+appl-staging.altschoolafrica.com:104.21.37.155
+application.prod.altschoolafrica.com
+application.stage.altschoolafrica.com
+apply.altschoolafrica.com
+assessment.altschoolafrica.com
+assessment.altschoolafrica.com:172.67.210.81
+atom.altschoolafrica.com
+atom.altschoolafrica.com:104.21.37.155
+ayw337ssd.altschoolafrica.com
+ayw337ssd.altschoolafrica.com:162.159.130.73
+backend-payment.prod.altschoolafrica.com
+backend-payments.stage.altschoolafrica.com
+bga.altschoolafrica.com
+blog.altschoolafrica.com
+blog.altschoolafrica.com:162.159.130.73
+bmp.altschoolafrica.com
+bmp.altschoolafrica.com:172.67.210.81
+business.altschoolafrica.com
+business.altschoolafrica.com:104.21.37.155
+captain.prod.altschoolafrica.com
+captain.stage.altschoolafrica.com
+career-journey.prod.altschoolafrica.com
+certificate.prod.altschoolafrica.com
+comms.altschoolafrica.com
+community.altschoolafrica.com
+connect-stage.altschoolafrica.com
+connect-stage.altschoolafrica.com:172.67.210.81
+core.altschoolafrica.com
+core.altschoolafrica.com:104.21.37.155
+courses.altschoolafrica.com
+courses.altschoolafrica.com:172.67.210.81
+creative.altschoolafrica.com
+creative.altschoolafrica.com:104.21.37.155
+data.altschoolafrica.com
+data.altschoolafrica.com:172.67.210.81
+engineering.altschoolafrica.com
+engineering.altschoolafrica.com:104.21.37.155
+fbrowser.prod.altschoolafrica.com
+go-admin.altschoolafrica.com
+hireadev.altschoolafrica.com
+lai-demo.prod.altschoolafrica.com
+launchpad.altschoolafrica.com
+launchpad.altschoolafrica.com:162.159.129.73
+learn.altschoolafrica.com
+learn.altschoolafrica.com:172.67.210.81
+opay.altschoolafrica.com
+portal-stage.altschoolafrica.com
+portal.altschoolafrica.com
+portal.altschoolafrica.com:104.21.37.155
+product.altschoolafrica.com
+product.altschoolafrica.com:172.67.210.81
+sample-go.prod.altschoolafrica.com
+scholarships.altschoolafrica.com
+scholarships.altschoolafrica.com:162.159.130.73
+shared-files.altschoolafrica.com
+sso.altschoolafrica.com
+staging-learn.altschoolafrica.com
+staging-learn.altschoolafrica.com:172.67.210.81
+start.altschoolafrica.com
+start.altschoolafrica.com:172.67.210.81
+start2026.altschoolafrica.com
+start2026.altschoolafrica.com:104.21.37.155
+store.altschoolafrica.com
+store.altschoolafrica.com:104.21.37.155
+students-staging.altschoolafrica.com
+students-staging.altschoolafrica.com:172.67.210.81
+students.altschoolafrica.com
+students.altschoolafrica.com:172.67.210.81
+training.altschoolafrica.com
+training.altschoolafrica.com:3.13.246.91
+url3219.altschoolafrica.com
+youthrive.altschoolafrica.com
+
+[*] Performing SecurityScorecard scan...
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+An exception has occurred in SecurityScorecard scanning: 
+[!] Missing API key for SecurityScorecard. 
+
+[*] Performing BuiltWith scan...
+Read api-keys.yaml from /etc/theHarvester/api-keys.yaml
+
+[!] Missing API key for BuiltWith. 

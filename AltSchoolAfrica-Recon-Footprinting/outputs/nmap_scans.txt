@@ -1,0 +1,67 @@
+# Nmap 7.99 scan initiated Wed Jun 17 08:50:52 2026 as: /usr/lib/nmap/nmap --privileged -sC -sV -p- -oA nmap_full -oN outputs/nmap_scans.txt altschoolafrica.com
+Nmap scan report for altschoolafrica.com (104.21.37.155)
+Host is up (0.11s latency).
+Other addresses for altschoolafrica.com (not scanned): 2606:4700:3033::6815:259b 2606:4700:3033::ac43:d251 172.67.210.81
+Not shown: 65521 filtered tcp ports (no-response)
+PORT     STATE  SERVICE  VERSION
+80/tcp   open   http     Cloudflare http proxy
+|_http-title: Site doesn't have a title (text/plain).
+|_http-server-header: cloudflare
+443/tcp  open   ssl/http Cloudflare http proxy
+|_http-server-header: cloudflare
+|_http-title:  AltSchool Africa | Learn In-Demand Tech Skills &amp; Launch Y...
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+2052/tcp open   http     Cloudflare http proxy
+|_http-server-header: cloudflare
+2053/tcp open   ssl/http nginx
+|_http-server-header: cloudflare
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+2082/tcp open   http     Cloudflare http proxy
+|_http-server-header: cloudflare
+2083/tcp open   ssl/http nginx
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_http-server-header: cloudflare
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+2086/tcp open   http     Cloudflare http proxy
+|_http-server-header: cloudflare
+2087/tcp open   ssl/http nginx
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_http-server-header: cloudflare
+2095/tcp open   http     Cloudflare http proxy
+|_http-server-header: cloudflare
+2096/tcp open   ssl/http nginx
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+|_http-server-header: cloudflare
+8080/tcp open   http     Cloudflare http proxy
+|_http-server-header: cloudflare
+8120/tcp closed unknown
+8443/tcp open   ssl/http Cloudflare http proxy
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_http-server-header: cloudflare
+| ssl-cert: Subject: commonName=altschoolafrica.com
+| Subject Alternative Name: DNS:altschoolafrica.com, DNS:start2026.altschoolafrica.com
+| Not valid before: 2026-06-07T10:17:32
+|_Not valid after:  2026-09-05T11:17:15
+8880/tcp open   http     Cloudflare http proxy
+|_http-server-header: cloudflare
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jun 17 08:58:49 2026 -- 1 IP address (1 host up) scanned in 477.64 seconds
