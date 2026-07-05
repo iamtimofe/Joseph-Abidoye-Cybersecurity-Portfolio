@@ -3,7 +3,7 @@
 **Category:** Offensive Security | OSINT & Reconnaissance
 **Platform:** Kali Linux VM
 **Target:** altschoolafrica.com (authorized lab domain, course-sanctioned assessment)
-**Status:** Complete — passive OSINT, active scanning, and attack surface prioritization
+**Status:** Complete passive OSINT, active scanning, and attack surface prioritization
 
 ---
 
@@ -20,7 +20,7 @@
 
 ## Objective
 
-Perform the reconnaissance and footprinting phase of a security assessment against a live domain — gathering everything an attacker could learn *before* touching the target directly, then escalating to active scanning, and finally converting raw findings into a prioritized attack surface.
+Perform the reconnaissance and footprinting phase of a security assessment against a live domain gathering everything an attacker could learn *before* touching the target directly, then escalating to active scanning, and finally converting raw findings into a prioritized attack surface.
 
 ## Part A — Passive OSINT
 
