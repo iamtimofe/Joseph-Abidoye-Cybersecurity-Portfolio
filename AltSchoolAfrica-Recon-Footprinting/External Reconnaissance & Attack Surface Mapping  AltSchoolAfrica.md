@@ -86,7 +86,7 @@ All open ports on the resolved IP (`104.21.37.155`) fronted by **Cloudflare's HT
 
 Built a Data Flow Diagram (DFD) mapping external actors (users, third-party merchants) through entry points (API gateway, web app, SSH, mail server) → Cloudflare CDN/proxy → backend microservices/datastores (learning platform, user database, course data, payment services).
 
-- Attack Surface DFD (image): [`screenhots/attack-surface-dfd.png`](screenhots/attack-surface-dfd.png)
+- Attack Surface DFD (image): [`screenhots/AttackSurfaceDFD.png`](screenhots/AttackSurfaceDFD.png)
 - Attack Surface DFD (editable source): [`screenshots/AttackSurfaceDFD.drawio`](screenhots/AttackSurfaceDFD.drawio)
 
 ### Target Prioritization
