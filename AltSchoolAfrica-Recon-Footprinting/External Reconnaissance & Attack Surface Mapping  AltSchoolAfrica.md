@@ -35,12 +35,12 @@ Perform the reconnaissance and footprinting phase of a security assessment again
 
 ### Evidence
 
-- Amass scan — command and output: [`screenshots/Amass01.png`](screenshots/Amass01.png)
-- Amass scan — command and output: [`screenshots/Amass02.png`](screenshots/Amass02.png)
+- Amass scan - command and output: [`screenshots/Amass01.png`](screenshots/Amass01.png)
+- Amass scan - command and output: [`screenshots/Amass02.png`](screenshots/Amass02.png)
 - Amass raw output file: [`outputs/amass_output.txt`](outputs/amass_output.txt)
-- Recon-ng scan — command and output: [`screenshots/Recon1.png`](screenshots/Recon1.png)
-- Recon-ng scan — command and output: [`screenshots/Recon3.png`](screenshots/Recon3.png)
-- Recon-ng scan — command and output: [`screenshots/Recon6.png`](screenshots/Recon6.png)
+- Recon-ng scan - command and output: [`screenshots/Recon1.png`](screenshots/Recon1.png)
+- Recon-ng scan - command and output: [`screenshots/Recon3.png`](screenshots/Recon3.png)
+- Recon-ng scan - command and output: [`screenshots/Recon6.png`](screenshots/Recon6.png)
 - WHOIS scan output: [`screenshots/WHOis.png`](screenshots/WHOis.png)
 - dig commands (A) output: [`screenshots/Dig%20A.png`](screenshots/Dig%20A.png)
 - dig commands (MX) output: [`screenshots/Dig%20MX.png`](screenshots/Dig%20MX.png)
@@ -54,10 +54,10 @@ Perform the reconnaissance and footprinting phase of a security assessment again
 
 | # | Finding | Source | Confidence | Sensitivity |
 |---|---|---|---|---|
-| 1 | Domain registration details — GoDaddy.com LLC, registered 2021-10-11, Cloudflare nameservers | WHOIS | High | Public |
+| 1 | Domain registration details GoDaddy.com LLC, registered 2021-10-11, Cloudflare nameservers | WHOIS | High | Public |
 | 2 | A records resolving to Cloudflare-fronted IPs | dig A | High | Public |
-| 3 | MX records — Google mail servers | dig MX | High | Public |
-| 4 | TXT records — Google site verification, Zoho verification, SPF policy | dig TXT | High | Public |
+| 3 | MX records Google mail servers | dig MX | High | Public |
+| 4 | TXT records Google site verification, Zoho verification, SPF policy | dig TXT | High | Public |
 | 5 | CNAME records showing Cloudflare authoritative nameservers | dig CNAME | Medium | Public |
 | 6 | Subdomains, IPs, ASNs and URLs (incl. a backend payment subdomain) | theHarvester | High | Public |
 | 7 | Additional subdomains (students, blog) | Recon-ng | High | Public |
@@ -80,7 +80,7 @@ Perform the reconnaissance and footprinting phase of a security assessment again
 
 ### Discovered Services (summary)
 
-All open ports on the resolved IP (`104.21.37.155`) fronted by **Cloudflare's HTTP/HTTPS proxy** — including standard 80/443 and Cloudflare's alternate ports (2052/2053/2082/2083/2086/2087/2095/2096/8080/8443/8880). SSL certificates observed with `CN=altschoolafrica.com`.
+All open ports on the resolved IP (`104.21.37.155`) fronted by **Cloudflare's HTTP/HTTPS proxy** including standard 80/443 and Cloudflare's alternate ports (2052/2053/2082/2083/2086/2087/2095/2096/8080/8443/8880). SSL certificates observed with `CN=altschoolafrica.com`.
 
 ## Part C — Attack Surface Mapping & Prioritization
 
@@ -94,11 +94,11 @@ Built a Data Flow Diagram (DFD) mapping external actors (users, third-party merc
 
 | Priority | Target | Risk Statement |
 |---|---|---|
-| 1 | Public API Gateway (Port 443) | Exposed endpoint identified via Nmap + OSINT; APIs commonly leak data via unsecured routes or expired tokens — high risk of unauthorized access/exfiltration |
+| 1 | Public API Gateway (Port 443) | Exposed endpoint identified via Nmap + OSINT; APIs commonly leak data via unsecured routes or expired tokens high risk of unauthorized access/exfiltration |
 | 2 | Legacy Web Server (Port 8080) | Outdated Apache with known CVEs; unpatched legacy infrastructure raises exploitation risk |
 | 3 | SSH Service (Port 22) | Open with default banner enabled; disabling banner disclosure + rate-limiting reduces brute-force/credential-stuffing risk |
 | 4 | Mail Server (Google MX) | Exposed MX records; SPF/DKIM alignment needed to prevent domain spoofing and phishing |
-| 5 | Payment Service Subdomain (`backend-payment.prod`) | Handles financial transactions; TLS misconfiguration flagged — high-value target for data theft or MitM |
+| 5 | Payment Service Subdomain (`backend-payment.prod`) | Handles financial transactions; TLS misconfiguration flagged high-value target for data theft or MitM |
 
 ## Tools Used
 
@@ -106,7 +106,7 @@ Built a Data Flow Diagram (DFD) mapping external actors (users, third-party merc
 
 ## Reflection
 
-This project reinforced that effective reconnaissance is less about memorizing commands and more about problem-solving when tools don't cooperate. Amass v5.51.1 initially returned no results due to API licensing requirements — downgrading to v3.20.0 resolved it. theHarvester required sourcing API keys before several of its sources would work. Scanning a Cloudflare-fronted target also meant the real origin infrastructure stayed masked behind the proxy, which is itself a useful finding about the target's defensive posture. Working through these obstacles built practical fluency with OSINT tooling (Amass, WHOIS, dig, theHarvester), active enumeration with Nmap, and translating raw findings into a prioritized, risk-ranked attack surface — the foundation any security assessment is built on.
+This project reinforced that effective reconnaissance is less about memorizing commands and more about problem-solving when tools don't cooperate. Amass v5.51.1 initially returned no results due to API licensing requirements — downgrading to v3.20.0 resolved it. theHarvester required sourcing API keys before several of its sources would work. Scanning a Cloudflare-fronted target also meant the real origin infrastructure stayed masked behind the proxy, which is itself a useful finding about the target's defensive posture. Working through these obstacles built practical fluency with OSINT tooling (Amass, WHOIS, dig, theHarvester), active enumeration with Nmap, and translating raw findings into a prioritized, risk-ranked attack surface the foundation any security assessment is built on.
 
 ## Skills Demonstrated
 
