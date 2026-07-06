@@ -24,6 +24,8 @@ Four related datasets were prepared for this lab to test detection logic against
 - `linux_auth_logs_full(balanced).csv`
 - `linux_auth_logs_full(new_unbalanced).csv` ← used for this lab (58,238 KB, 12,500+ events)
 
+  ![Linux authentication logs ](screenshots/Dataset.png)
+
 The unbalanced dataset was chosen deliberately real-world auth logs are overwhelmingly normal traffic with a small proportion of malicious activity, so this dataset better reflects what an analyst actually triages.
 
 ## Methodology
