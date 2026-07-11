@@ -1,4 +1,4 @@
-# 🔐 Web Application Vulnerabilities — DVWA
+# 🔐 Web Application Vulnerabilities - DVWA
 
 ### Joseph Abidoye
 
