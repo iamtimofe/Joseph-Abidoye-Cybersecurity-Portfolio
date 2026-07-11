@@ -14,7 +14,7 @@ This project demonstrates how Wazuh can be used to identify and analyze security
    Navigated to *Security Events* and *System Auditing* tabs. Observed alerts categorized by severity.
 
 3. **Event Identification**  
-   Selected alert: *File Integrity Monitoring — Integrity checksum changed for `c:\assessment2\joseph_abidoye.txt`.*
+   Selected alert: *File Integrity Monitoring Integrity checksum changed for `c:\assessment2\joseph_abidoye.txt`.*
 
 4. **Analysis**  
    - **Technical Explanation:** Wazuh detected a modification in the file’s cryptographic hash (SHA1/SHA256 mismatch).  
