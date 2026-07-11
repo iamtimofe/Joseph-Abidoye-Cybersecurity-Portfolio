@@ -173,7 +173,7 @@ a forged external page to trigger the action on behalf of an authenticated victi
 ## 📊 Full Report
 
 Full payload details, Burp Suite request/response evidence, and screenshots are documented in this
-project's folder in the main portfolio repository. - [Full Reports](https://github.com/iamtimofe/Joseph-Abidoye-Cybersecurity-Portfolio/blob/main/Web-Application-Vulnerabilities-DVWA/Web-App%20Vulnerability.md)
+project's folder in the main portfolio repository. - [Find Full Report Here](https://github.com/iamtimofe/Joseph-Abidoye-Cybersecurity-Portfolio/blob/main/Web-Application-Vulnerabilities-DVWA/Web-App%20Vulnerability.md)
 
 ---
 
