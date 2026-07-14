@@ -44,15 +44,15 @@ This project documents a phishing investigation performed in a controlled lab en
 
 ## 🔍 Investigation Workflow
 
-### Phase 1 — PhishTank Verification
+### Phase 1 - PhishTank Verification
 
 The reported phishing URL was verified using PhishTank to confirm it had been reported by the security community.
 
-### Phase 2 — VirusTotal Analysis
+### Phase 2 - VirusTotal Analysis
 
 The URL was submitted to VirusTotal to determine detection rates from multiple security vendors.
 
-### Phase 3 — DNS Investigation
+### Phase 3 - DNS Investigation
 
 DNS records were collected using:
 
@@ -61,7 +61,7 @@ DNS records were collected using:
 - MX Record
 - TXT Record
 
-### Phase 4 — WHOIS Investigation
+### Phase 4 - WHOIS Investigation
 
 WHOIS information was gathered to identify:
 
@@ -69,11 +69,11 @@ WHOIS information was gathered to identify:
 - Nameservers
 - Registrar information
 
-### Phase 5 — HTTP Header Analysis
+### Phase 5 - HTTP Header Analysis
 
 HTTP response headers were analyzed using `curl`.
 
-### Phase 6 — Infrastructure Investigation
+### Phase 6 - Infrastructure Investigation
 
 Hosting infrastructure was investigated using:
 
@@ -110,7 +110,7 @@ Hosting infrastructure was investigated using:
 | Tactic | Technique |
 |---------|-----------|
 | Initial Access | T1566.002 – Phishing: Link |
-| Resource Development | T1583 – Acquire Infrastructure |
+| Resource Development | T1583 - Acquire Infrastructure |
 
 ---
 
