@@ -5,7 +5,7 @@ The raw evidence collected during the investigation is available below.
 ## DNS Analysis
 
 - 📄 [DNS Records (A, AAAA, MX, TXT)](WHOIS/dns_evidence.txt)
-- 📄 [Nameserver Lookup](WHOIS/ns_report.txt)
+- 📄 [Nameserver Lookup](WHOIS/dns_report.txt)
 
 ## WHOIS
 
