@@ -25,6 +25,3 @@ The raw evidence collected during the investigation is available below.
 - 📄 [Investigation Report](../IOC_Report/investigation_report.md)
 - 📄 [Final Phishing Report](../IOC_Report/Final_Phishing_Report.md)
 
-## Investigation Notes
-
-- 📄 [Analyst Notes](Evidence/investigation_notes.txt)
