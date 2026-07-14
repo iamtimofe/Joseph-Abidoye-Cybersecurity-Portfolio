@@ -96,6 +96,40 @@ This project documents a phishing investigation conducted in a Kali Linux virtua
 
 ---
 
+---
+
+## 📸 Investigation Screenshots
+
+### 1. PhishTank Verification
+
+The phishing URL was first verified using PhishTank.
+
+![PhishTank Verification](Screenshots/01_phishtank.png)
+
+---
+
+### 2. VirusTotal Analysis
+
+VirusTotal confirmed the URL was flagged as phishing.
+
+![VirusTotal Analysis](Screenshots/02_virustotal.png)
+
+---
+
+### 3. IP Information
+
+IP infrastructure information obtained from IPinfo.
+
+![IP Information](Screenshots/03_ipinfo.png)
+
+---
+
+### 4. AbuseIPDB Reputation Check
+
+IP reputation lookup performed using AbuseIPDB.
+
+![AbuseIPDB](Screenshots/04_abuseipdb.png)
+
 ## ⚠️ Disclaimer
 
 This project was completed in a controlled lab environment for educational purposes. No unauthorized access, exploitation, or interaction beyond passive analysis was performed.
