@@ -1,23 +1,34 @@
-# 🛡️ SOC Phishing Investigation Lab
+# 🛡️ SOC Analyst Phishing Investigation Lab
 
 ## 📌 Project Overview
 
-This project documents a phishing investigation conducted in a Kali Linux virtual machine as part of my cybersecurity training. The objective was to investigate a live phishing website, collect indicators of compromise (IOCs), perform threat intelligence enrichment, and document the findings in a professional incident report.
+This project documents a phishing investigation performed in a controlled lab environment using Kali Linux. The objective was to analyze a reported phishing website, collect Indicators of Compromise (IOCs), perform threat intelligence analysis, and produce a professional investigation report.
 
 ---
 
 ## 🎯 Objectives
 
-- Investigate a reported phishing website
+- Investigate a reported phishing URL
+- Verify the threat using open-source intelligence (OSINT)
 - Collect Indicators of Compromise (IOCs)
-- Perform DNS and WHOIS analysis
-- Analyze HTTP response headers
-- Perform IP reputation checks
-- Produce a professional investigation report
+- Perform DNS, WHOIS, and HTTP analysis
+- Investigate the hosting infrastructure
+- Document findings in a professional report
 
 ---
 
-## 🛠️ Tools Used
+## 🛠️ Lab Environment
+
+| Component | Details |
+|-----------|---------|
+| Operating System | Kali Linux |
+| Virtualization | Oracle VirtualBox |
+| Internet Access | Enabled |
+| Investigation Type | Phishing URL Investigation |
+
+---
+
+## 🧰 Tools Used
 
 - Kali Linux
 - Oracle VirtualBox
@@ -33,37 +44,68 @@ This project documents a phishing investigation conducted in a Kali Linux virtua
 
 ## 🔍 Investigation Workflow
 
-1. Identified the phishing URL from PhishTank.
-2. Verified the URL using VirusTotal.
-3. Performed DNS enumeration.
-4. Collected WHOIS and infrastructure information.
-5. Analyzed HTTP response headers.
-6. Performed IP reputation analysis.
-7. Documented all findings in an investigation report.
+### Phase 1 — PhishTank Verification
+
+The reported phishing URL was verified using PhishTank to confirm it had been reported by the security community.
+
+### Phase 2 — VirusTotal Analysis
+
+The URL was submitted to VirusTotal to determine detection rates from multiple security vendors.
+
+### Phase 3 — DNS Investigation
+
+DNS records were collected using:
+
+- A Record
+- NS Record
+- MX Record
+- TXT Record
+
+### Phase 4 — WHOIS Investigation
+
+WHOIS information was gathered to identify:
+
+- Domain registration details
+- Nameservers
+- Registrar information
+
+### Phase 5 — HTTP Header Analysis
+
+HTTP response headers were analyzed using `curl`.
+
+### Phase 6 — Infrastructure Investigation
+
+Hosting infrastructure was investigated using:
+
+- IPinfo
+- AbuseIPDB
 
 ---
 
-## 📊 Indicators of Compromise (IOCs)
+# 📊 Indicators of Compromise (IOCs)
 
-| Type | Value |
-|------|-------|
-| Domain | `bbgoverno.digital` |
-| IP Address | `5.230.71.248` |
-| Nameservers | `ns1.dyna-ns.net`, `ns2.dyna-ns.net` |
+| Indicator | Value |
+|-----------|-------|
+| Domain | bbgoverno.digital |
+| IP Address | 5.230.71.248 |
+| Nameservers | ns1.dyna-ns.net |
+| | ns2.dyna-ns.net |
 
 ---
 
-## 📝 Key Findings
+# 📝 Investigation Findings
 
-- The phishing website was active during the investigation.
-- The domain resolved to **5.230.71.248**.
-- Infrastructure was hosted by **GHOSTnet GmbH** in Germany.
+- The phishing website was active during analysis.
 - VirusTotal identified the URL as phishing.
-- DNS and HTTP analysis supported the phishing assessment.
+- The domain resolved to **5.230.71.248**.
+- The infrastructure was hosted by **GHOSTnet GmbH**.
+- IP geolocation pointed to **Frankfurt, Germany**.
+- AbuseIPDB showed no prior abuse reports for the IP at the time of investigation.
+- DNS analysis identified two authoritative nameservers.
 
 ---
 
-## 🛡️ MITRE ATT&CK Mapping
+# 🛡️ MITRE ATT&CK Mapping
 
 | Tactic | Technique |
 |---------|-----------|
@@ -72,64 +114,89 @@ This project documents a phishing investigation conducted in a Kali Linux virtua
 
 ---
 
-## 📂 Project Contents
+# 📂 Project Structure
 
-- `Evidence/` – Investigation notes
-- `IOC_Report/` – Final report and collected IOCs
-- `WHOIS/` – DNS, WHOIS and HTTP analysis
-- `Screenshots/` – Evidence screenshots
-- `URL_Analysis/` – URL analysis files
+```
+SOC-Phishing-Investigation-Lab
+│
+├── Evidence
+├── IOC_Report
+├── Screenshots
+├── URL_Analysis
+├── WHOIS
+├── README.md
+└── LICENSE
+```
 
 ---
 
-## 💡 Skills Demonstrated
+# 📸 Investigation Screenshots
 
-- Phishing Investigation
+## 1. PhishTank Verification
+
+![PhishTank](Screenshots/01_phishtank.png)
+
+---
+
+## 2. VirusTotal Analysis
+
+![VirusTotal](Screenshots/02_virustotal.png)
+
+---
+
+## 3. IPinfo Infrastructure Analysis
+
+![IPinfo](Screenshots/03_ipinfo.png)
+
+---
+
+## 4. AbuseIPDB Reputation Check
+
+![AbuseIPDB](Screenshots/04_abuseipdb.png)
+
+---
+
+# 📁 Project Reports
+
+This repository includes:
+
+- IOC Report
+- Investigation Report
+- WHOIS Results
+- DNS Enumeration
+- HTTP Header Analysis
+- Investigation Notes
+
+---
+
+# 💡 Skills Demonstrated
+
 - Threat Intelligence
+- Phishing Investigation
 - IOC Collection
-- DNS Analysis
+- DNS Enumeration
 - WHOIS Analysis
 - HTTP Header Analysis
 - Linux Command Line
-- Documentation
+- Threat Hunting
+- Security Documentation
 - Incident Reporting
 
 ---
 
----
+# 📚 Key Learning Outcomes
 
-## 📸 Investigation Screenshots
+Through this investigation I learned how to:
 
-### 1. PhishTank Verification
-
-The phishing URL was first verified using PhishTank.
-
-![PhishTank Verification](Screenshots/01_phishtank.png)
-
----
-
-### 2. VirusTotal Analysis
-
-VirusTotal confirmed the URL was flagged as phishing.
-
-![VirusTotal Analysis](Screenshots/02_virustotal.png)
+- Validate phishing indicators using OSINT.
+- Collect and document Indicators of Compromise.
+- Investigate malicious infrastructure.
+- Perform DNS and WHOIS analysis.
+- Analyze HTTP response headers.
+- Produce professional SOC investigation documentation.
 
 ---
 
-### 3. IP Information
+# ⚠️ Disclaimer
 
-IP infrastructure information obtained from IPinfo.
-
-![IP Information](Screenshots/03_ipinfo.png)
-
----
-
-### 4. AbuseIPDB Reputation Check
-
-IP reputation lookup performed using AbuseIPDB.
-
-![AbuseIPDB](Screenshots/04_abuseipdb.png)
-
-## ⚠️ Disclaimer
-
-This project was completed in a controlled lab environment for educational purposes. No unauthorized access, exploitation, or interaction beyond passive analysis was performed.
+This project was completed in a controlled lab environment for educational purposes only. No unauthorized exploitation or interaction with the target infrastructure was performed. All analysis relied on publicly available information and passive investigation techniques.
