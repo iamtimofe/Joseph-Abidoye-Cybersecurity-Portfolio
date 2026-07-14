@@ -1,0 +1,23 @@
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+
+; <<>> DiG 9.20.24-1+b1-Debian <<>> bbgoverno.digital
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26695
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;bbgoverno.digital.		IN	A
+
+;; ANSWER SECTION:
+bbgoverno.digital.	277	IN	A	5.230.71.248
+
+;; Query time: 104 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Tue Jul 14 07:54:23 CDT 2026
+;; MSG SIZE  rcvd: 62
+

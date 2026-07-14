@@ -1,0 +1,99 @@
+===== A RECORD =====
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+
+; <<>> DiG 9.20.24-1+b1-Debian <<>> A bbgoverno.digital
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36143
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;bbgoverno.digital.		IN	A
+
+;; ANSWER SECTION:
+bbgoverno.digital.	300	IN	A	5.230.71.248
+
+;; Query time: 387 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Tue Jul 14 08:23:51 CDT 2026
+;; MSG SIZE  rcvd: 62
+
+
+===== AAAA RECORD =====
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+
+; <<>> DiG 9.20.24-1+b1-Debian <<>> AAAA bbgoverno.digital
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3021
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;bbgoverno.digital.		IN	AAAA
+
+;; AUTHORITY SECTION:
+bbgoverno.digital.	300	IN	SOA	ns1.dyna-ns.net. hostmaster.bbgoverno.digital. 2026071201 16384 2048 1209600 300
+
+;; Query time: 339 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Tue Jul 14 08:24:07 CDT 2026
+;; MSG SIZE  rcvd: 108
+
+
+===== MX RECORD =====
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+
+; <<>> DiG 9.20.24-1+b1-Debian <<>> MX bbgoverno.digital
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53068
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;bbgoverno.digital.		IN	MX
+
+;; AUTHORITY SECTION:
+bbgoverno.digital.	300	IN	SOA	ns1.dyna-ns.net. hostmaster.bbgoverno.digital. 2026071201 16384 2048 1209600 300
+
+;; Query time: 331 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Tue Jul 14 08:24:22 CDT 2026
+;; MSG SIZE  rcvd: 108
+
+
+===== TXT RECORD =====
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+
+; <<>> DiG 9.20.24-1+b1-Debian <<>> TXT bbgoverno.digital
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2437
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;bbgoverno.digital.		IN	TXT
+
+;; AUTHORITY SECTION:
+bbgoverno.digital.	300	IN	SOA	ns1.dyna-ns.net. hostmaster.bbgoverno.digital. 2026071201 16384 2048 1209600 300
+
+;; Query time: 447 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Tue Jul 14 08:24:38 CDT 2026
+;; MSG SIZE  rcvd: 108
+

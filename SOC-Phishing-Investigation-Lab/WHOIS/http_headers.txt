@@ -1,0 +1,12 @@
+HTTP/2 302 
+server: nginx
+date: Tue, 14 Jul 2026 13:35:09 GMT
+content-type: text/html; charset=UTF-8
+location: appcx/index.html
+set-cookie: PHPSESSID=rvp4l6p3t3ootddoenn9b4d3d4; path=/
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate
+pragma: no-cache
+set-cookie: cookie_test=enabled; expires=Tue, 14 Jul 2026 14:35:09 GMT; Max-Age=3600; path=/
+strict-transport-security: max-age=31536000
+

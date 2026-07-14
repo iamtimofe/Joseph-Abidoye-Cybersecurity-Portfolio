@@ -1,0 +1,26 @@
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+;; communications error to 41.223.65.1#53: timed out
+
+; <<>> DiG 9.20.24-1+b1-Debian <<>> -x 5.230.71.248
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 63026
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;248.71.230.5.in-addr.arpa.	IN	PTR
+
+;; ANSWER SECTION:
+248.71.230.5.in-addr.arpa. 10800 IN	CNAME	248.0-255.71.230.5.in-addr.arpa.
+
+;; AUTHORITY SECTION:
+0-255.71.230.5.in-addr.arpa. 1800 IN	SOA	ns1.noez.de. care.noez.de. 2026071402 10800 3600 604800 3600
+
+;; Query time: 563 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Tue Jul 14 08:15:48 CDT 2026
+;; MSG SIZE  rcvd: 130
+

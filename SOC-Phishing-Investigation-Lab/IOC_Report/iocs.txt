@@ -1,0 +1,63 @@
+CASE-001
+
+Domain
+------
+bbgoverno.digital
+
+URL
+---
+hxxps://bbgoverno[.]digital/appcx/index.html
+
+IP Address
+----------
+5.230.71.248
+
+Name Servers
+------------
+ns1.dyna-ns.net
+ns2.dyna-ns.net
+
+Status
+------
+ONLINE
+
+Source
+------
+PhishTank
+
+
+
+
+VirusTotal Analysis
+-------------------
+Detection Ratio: 1/92
+
+Detected By:
+- ESET (Phishing)
+
+HTTP Status:
+200 OK
+
+Content Type:
+text/html
+
+Last Analysis:
+10 minutes ago
+
+
+
+
+Infrastructure Analysis
+-----------------------
+
+IP Address:
+5.230.71.248
+
+Reverse DNS:
+No PTR record found (NXDOMAIN)
+
+Traceroute:
+Only VirtualBox NAT gateway visible; further hops did not respond.
+
+TLS Observation:
+Certificate hostname mismatch when connecting to bbgoverno.digital.
