@@ -4,7 +4,7 @@
 
 **Case ID:** CASE-001
 
-**Investigator:** Folayinka
+**Investigator:** Joseph Abidoye
 
 **Investigation Date:** July 14, 2026
 
