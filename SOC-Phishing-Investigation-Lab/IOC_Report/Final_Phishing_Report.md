@@ -1,6 +1,6 @@
 # Phishing Investigation Report
 
-**Investigator:** Folayinka
+**Investigator:** Joseph Abidoye
 
 **Role:** SOC Analyst (Lab)
 
