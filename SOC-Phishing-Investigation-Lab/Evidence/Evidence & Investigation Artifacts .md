@@ -21,9 +21,9 @@ The raw evidence collected during the investigation is available below.
 
 ## Investigation Reports
 
-- 📄 [Indicators of Compromise (IOCs)](./IOC_Report/iocs.txt)
-- 📄 [Investigation Report](./IOC_Report/investigation_report.md)
-- 📄 [Final Phishing Report](./IOC_Report/Final_Phishing_Report.md)
+- 📄 [Indicators of Compromise (IOCs)](../IOC_Report/iocs.txt)
+- 📄 [Investigation Report](../IOC_Report/investigation_report.md)
+- 📄 [Final Phishing Report](../IOC_Report/Final_Phishing_Report.md)
 
 ## Investigation Notes
 
