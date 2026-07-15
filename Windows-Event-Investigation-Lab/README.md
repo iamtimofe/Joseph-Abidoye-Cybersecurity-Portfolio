@@ -2,37 +2,57 @@
 
 ![Windows Server](https://img.shields.io/badge/Windows%20Server-2022-blue)
 ![Kali Linux](https://img.shields.io/badge/Kali-Linux-557C94)
-![SOC](https://img.shields.io/badge/SOC-Investigation-success)
+![SOC](https://img.shields.io/badge/SOC-Blue%20Team-success)
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## Project Overview
+---
 
-This project demonstrates a hands-on **Windows Security Event Investigation** performed in a controlled lab environment using **Windows Server 2022** and **Kali Linux** running in Oracle VirtualBox.
+# Table of Contents
 
-The investigation follows a typical Security Operations Center (SOC) workflow, beginning with network reconnaissance, followed by authentication testing, Windows Event Log analysis, incident documentation, IOC collection, and the production of a final incident report.
-
-The lab simulates realistic administrative and security events that SOC analysts investigate daily, including:
-
-- Failed authentication attempts
-- Successful user logons
-- User account creation
-- Privilege escalation
-- Remote SMB authentication failures
-- Network enumeration
+- [Project Overview](#project-overview)
+- [Lab Environment](#lab-environment)
+- [Tools Used](#tools-used)
+- [Investigation Workflow](#investigation-workflow)
+- [Investigation Phases](#investigation-phases)
+  - [Phase 1: Network Enumeration](#phase-1-network-enumeration)
+  - [Phase 2: Failed Logon Investigation](#phase-2-failed-logon-investigation)
+  - [Phase 3: Successful Logon Investigation](#phase-3-successful-logon-investigation)
+  - [Phase 4: User Account Creation Investigation](#phase-4-user-account-creation-investigation)
+  - [Phase 5: Privilege Escalation Investigation](#phase-5-privilege-escalation-investigation)
+  - [Phase 6: Remote SMB Authentication Investigation](#phase-6-remote-smb-authentication-investigation)
+- [Investigation Timeline](#investigation-timeline)
+- [Event Summary](#event-summary)
+- [MITRE ATT&CK Mapping](#mitre-attck-mapping)
+- [Indicators of Compromise (IOCs)](#indicators-of-compromise-iocs)
+- [Evidence and Screenshots](#evidence-and-screenshots)
+- [Final Incident Report](#final-incident-report)
+- [Repository Structure](#repository-structure)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Key Findings](#key-findings)
+- [Learning Outcomes](#learning-outcomes)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
 ---
 
-# Objectives
+# Project Overview
 
-- Investigate Windows Security Events.
-- Analyze authentication activity.
-- Detect account creation and privilege changes.
-- Perform network reconnaissance.
-- Simulate remote authentication attempts.
-- Collect Indicators of Compromise (IOCs).
-- Correlate multiple Windows Security Events.
-- Produce a professional SOC investigation report.
+This project demonstrates a hands-on **Security Operations Center (SOC) investigation** performed inside an isolated VirtualBox laboratory environment using **Windows Server 2022** and **Kali Linux**.
+
+The purpose of this lab was to simulate realistic security events, investigate Windows Security Logs, analyze authentication activity, collect Indicators of Compromise (IOCs), correlate evidence, and document findings using a structured SOC investigation methodology.
+
+The investigation simulated common enterprise security scenarios including:
+
+- Network reconnaissance
+- SMB enumeration
+- Failed authentication attempts
+- Successful authentication events
+- User account creation
+- Privilege escalation
+- Remote authentication failures
+- IOC collection
+- Incident reporting
 
 ---
 
@@ -43,7 +63,7 @@ The lab simulates realistic administrative and security events that SOC analysts
 | Hypervisor | Oracle VirtualBox |
 | Target Machine | Windows Server 2022 |
 | Attacker Machine | Kali Linux |
-| Network | Internal Virtual Network |
+| Network Type | Internal Virtual Network |
 | Target IP | 192.168.100.10 |
 | Attacker IP | 192.168.100.20 |
 
@@ -51,13 +71,20 @@ The lab simulates realistic administrative and security events that SOC analysts
 
 # Tools Used
 
+## Windows Tools
+
 - Windows Event Viewer
-- NetExec (CrackMapExec)
-- Nmap
-- Command Prompt
 - PowerShell
-- Kali Linux
-- Windows Server 2022
+- Command Prompt
+
+## Kali Linux Tools
+
+- Nmap
+- NetExec (CrackMapExec)
+- SMB Tools
+
+## Documentation Tools
+
 - Git
 - GitHub
 
@@ -65,117 +92,46 @@ The lab simulates realistic administrative and security events that SOC analysts
 
 # Investigation Workflow
 
-```text
-Network Setup
-      │
-      ▼
-Network Enumeration
-      │
-      ▼
-Authentication Testing
-      │
-      ▼
-Windows Security Events
-      │
-      ▼
-IOC Collection
-      │
-      ▼
-Event Correlation
-      │
-      ▼
-Incident Reporting
+The investigation followed a typical SOC analyst workflow:
+
+```
+             Lab Setup
+                 │
+                 ▼
+       Network Enumeration
+                 │
+                 ▼
+       Authentication Testing
+                 │
+                 ▼
+      Windows Security Logs
+                 │
+                 ▼
+          Event Analysis
+                 │
+                 ▼
+          IOC Collection
+                 │
+                 ▼
+        Incident Reporting
 ```
 
 ---
 
 # Investigation Phases
 
-## Phase 1 — Failed Local Logon Investigation
+# Phase 1: Network Enumeration
 
-### Event ID
+## Objective
 
-4625 – Failed Logon
+Identify available services and exposed ports on the Windows Server before conducting authentication testing.
 
-### Objective
+## Tools Used
 
-Investigate a failed local authentication attempt.
+- Nmap
+- NetExec
 
-### Report
-
-- [Event 4625 Analysis](Event_Analysis/event_4625_bruteforce.md)
-
-### Screenshot
-
-![Failed Login](Screenshots/01_failed_login.png)
-
----
-
-## Phase 2 — Successful Logon Investigation
-
-### Event ID
-
-4624 – Successful Logon
-
-### Objective
-
-Analyze a successful Windows authentication event.
-
-### Report
-
-- [Successful Logon Investigation](Event_Analysis/event_4624_successful_logon.md)
-
-### Screenshot
-
-![Successful Logon](Screenshots/02_successful_logon.png)
-
----
-
-## Phase 3 — User Account Creation
-
-### Event ID
-
-4720 – User Account Created
-
-### Objective
-
-Investigate the creation of a new Windows user account.
-
-### Report
-
-- [User Account Creation Investigation](Event_Analysis/event_4720_user_creation.md)
-
-### Screenshot
-
-![User Account Created](Screenshots/03_user_created.png)
-
----
-
-## Phase 4 — Privilege Escalation Investigation
-
-### Event ID
-
-4732 – User Added to Administrators Group
-
-### Objective
-
-Investigate administrative privilege assignment.
-
-### Report
-
-- [Group Membership Investigation](Event_Analysis/event_4732_group_membership.md)
-
-### Screenshot
-
-![Group Membership](Screenshots/04_group_added.png)
-
----
-
-## Phase 5 — Network Enumeration
-
-The Windows Server was enumerated from Kali Linux before authentication testing.
-
-### Commands Used
+## Commands Used
 
 ```bash
 nmap -Pn -p 445 192.168.100.10
@@ -185,45 +141,167 @@ nmap -Pn -p 5985 192.168.100.10
 netexec smb 192.168.100.10
 ```
 
-### Findings
+## Findings
 
-- SMB (445/TCP) Open
-- WinRM (5985/TCP) Open
-- Windows Server 2022 identified
-- SMBv1 Disabled
-- SMB Signing Disabled
+The enumeration identified:
 
-### Report
+- SMB service running on port 445
+- WinRM service running on port 5985
+- Windows Server 2022 operating system
+- SMBv1 disabled
+- SMB signing disabled
 
-- [Network Enumeration](Event_Analysis/network_enumeration.md)
+## Investigation Report
 
-### Screenshot
+[Network Enumeration Report](Event_Analysis/network_enumeration.md)
+
+## Screenshot Evidence
 
 ![Network Enumeration](Screenshots/00_network_enumeration.png)
 
 ---
 
-## Phase 6 — Remote SMB Authentication Investigation
+# Phase 2: Failed Logon Investigation
 
-A failed SMB authentication attempt was generated from Kali Linux using NetExec.
+## Event ID
 
-Windows recorded the activity as **Event ID 4625**.
+**4625 — Failed Logon**
 
-### Event Details
+## Objective
+
+Investigate unsuccessful authentication attempts recorded within Windows Security Logs.
+
+## Investigation Details
+
+The analysis focused on:
+
+- Target username
+- Logon type
+- Authentication method
+- Failure reason
+- Source information
+
+## Investigation Report
+
+[Event 4625 Failed Logon Investigation](Event_Analysis/event_4625_bruteforce.md)
+
+## Screenshot Evidence
+
+![Failed Login](Screenshots/01_failed_login.png)
+
+---
+
+# Phase 3: Successful Logon Investigation
+
+## Event ID
+
+**4624 - Successful Logon**
+
+## Objective
+
+Analyze successful authentication events and identify normal versus suspicious login activity.
+
+## Investigation Details
+
+Reviewed:
+
+- Account used
+- Logon type
+- Authentication details
+- Timestamp information
+
+## Investigation Report
+
+[Event 4624 Successful Logon Investigation](Event_Analysis/event_4624_successful_logon.md)
+
+## Screenshot Evidence
+
+![Successful Logon](Screenshots/02_successful_logon.png)
+
+---
+
+# Phase 4: User Account Creation Investigation
+
+## Event ID
+
+**4720 - User Account Created**
+
+## Objective
+
+Detect and investigate the creation of new Windows user accounts.
+
+## Investigation Details
+
+The investigation reviewed:
+
+- Newly created user account
+- Account creation timestamp
+- Account creator
+
+## Investigation Report
+
+[User Account Creation Investigation](Event_Analysis/event_4720_user_creation.md)
+
+## Screenshot Evidence
+
+![User Created](Screenshots/03_user_created.png)
+
+---
+
+# Phase 5: Privilege Escalation Investigation
+
+## Event ID
+
+**4732 - User Added to Local Administrators Group**
+
+## Objective
+
+Identify unauthorized privilege assignment and administrative group changes.
+
+## Investigation Details
+
+The investigation identified:
+
+- User added to administrator group
+- Privilege escalation activity
+- Administrative permission changes
+
+## Investigation Report
+
+[Privilege Escalation Investigation](Event_Analysis/event_4732_group_membership.md)
+
+## Screenshot Evidence
+
+![Privilege Escalation](Screenshots/04_group_added.png)
+
+---
+
+# Phase 6: Remote SMB Authentication Investigation
+
+## Objective
+
+Generate and investigate remote authentication failures originating from Kali Linux.
+
+A failed SMB authentication attempt was performed using NetExec against the Windows Server.
+
+Windows generated **Event ID 4625**.
+
+## Event Details
 
 | Field | Value |
-|--------|-------|
+|------|-------|
 | Event ID | 4625 |
 | Logon Type | 3 (Network) |
 | Source IP | 192.168.100.20 |
+| Target Host | 192.168.100.10 |
 | Target Account | Administrator |
 | Authentication | NTLM |
 
-### Report
+## Investigation Report
 
-- [SMB Authentication Investigation](Event_Analysis/event_4625_bruteforce.md)
+[SMB Authentication Investigation](Event_Analysis/event_4625_bruteforce.md)
 
-### Screenshot
+## Screenshot Evidence
 
 ![Failed SMB Authentication](Screenshots/05_failed_smb_logon.png)
 
@@ -231,50 +309,17 @@ Windows recorded the activity as **Event ID 4625**.
 
 # Investigation Timeline
 
-A chronological timeline of all investigated events is available below.
+A chronological timeline of investigated security events:
 
-- [Investigation Timeline](Event_Analysis/timeline.md)
+[Investigation Timeline](Event_Analysis/timeline.md)
 
 ---
 
 # Event Summary
 
-A summary of all investigated Windows Security Events.
+A summarized view of analyzed Windows Security Events:
 
-- [Event Summary](Event_Analysis/event_summary.md)
-
----
-
-# Indicators of Compromise (IOCs)
-
-| Indicator | Value |
-|-----------|-------|
-| Source IP | 192.168.100.20 |
-| Target Host | 192.168.100.10 |
-| Target Account | Administrator |
-| Event IDs | 4624, 4625, 4720, 4732 |
-| Authentication | NTLM |
-
-Detailed IOC list:
-
-- [IOC Report](IOC_Report/iocs.txt)
-
----
-
-# Final Incident Report
-
-The complete SOC investigation report is available below.
-
-- [Final Incident Report](IOC_Report/Final_Incident_Report.md)
-
----
-
-# Evidence
-
-Supporting evidence collected during the investigation.
-
-- [Investigation Notes](Evidence/investigation_notes.txt)
-- [Network Scan Results](Evidence/network_scan.txt)
+[Event Summary](Event_Analysis/event_summary.md)
 
 ---
 
@@ -290,96 +335,55 @@ Supporting evidence collected during the investigation.
 
 ---
 
-# Skills Demonstrated
+# Indicators of Compromise (IOCs)
 
-- Windows Event Log Analysis
-- Authentication Investigation
-- Network Enumeration
-- SMB Authentication Analysis
-- Privilege Escalation Detection
-- IOC Collection
-- Incident Documentation
-- Event Correlation
-- Threat Investigation
-- MITRE ATT&CK Mapping
-- Technical Reporting
-- Git & GitHub Documentation
+| Indicator | Value |
+|-----------|-------|
+| Source IP | 192.168.100.20 |
+| Target Host | 192.168.100.10 |
+| Target Account | Administrator |
+| Event IDs | 4624, 4625, 4720, 4732 |
+| Authentication | NTLM |
 
----
+## IOC Report
 
-# Challenges Encountered
-
-## 1. Virtual Machine Network Connectivity
-
-### Challenge
-
-Initially, Kali Linux and Windows Server could not communicate.
-
-Symptoms included:
-
-- Destination Host Unreachable
-- Network is unreachable
-- APIPA (169.254.x.x) addressing
-- Failed ping requests
-
-### Resolution
-
-- Configured both virtual machines on the same VirtualBox Internal Network.
-- Assigned static IPv4 addresses:
-  - Windows Server: `192.168.100.10`
-  - Kali Linux: `192.168.100.20`
-- Verified routing.
-- Confirmed connectivity with successful ICMP tests.
+[View IOC Report](IOC_Report/iocs.txt)
 
 ---
 
-## 2. Windows Firewall Blocking ICMP
+# Evidence and Screenshots
 
-### Challenge
+All supporting evidence collected during the investigation:
 
-Even after assigning IP addresses, ping requests initially failed.
+## Evidence Files
 
-### Resolution
+- [Investigation Notes](Evidence/investigation_notes.txt)
+- [Network Scan Results](Evidence/network_scan.txt)
 
-Temporarily disabled Windows Firewall for the isolated lab environment to validate connectivity and continue testing.
+## Screenshot Evidence
 
----
-
-## 3. Remote Authentication Testing
-
-### Challenge
-
-Initial failed logon events only generated local authentication records.
-
-### Resolution
-
-Used **NetExec** from Kali Linux to perform remote SMB authentication attempts, successfully generating **Event ID 4625** with the remote source IP (`192.168.100.20`) for investigation.
+| Screenshot | Description |
+|------------|-------------|
+| 00_network_enumeration.png | Network enumeration results |
+| 01_failed_login.png | Failed Windows authentication |
+| 02_successful_logon.png | Successful Windows authentication |
+| 03_user_created.png | User account creation event |
+| 04_group_added.png | Privilege escalation event |
+| 05_failed_smb_logon.png | Remote SMB authentication failure |
 
 ---
 
-## 4. GitHub Documentation
+# Final Incident Report
 
-### Challenge
+The complete SOC investigation report:
 
-Ensuring the repository was organized and easy to navigate.
-
-### Resolution
-
-Created a structured project layout with:
-
-- Event reports
-- IOC reports
-- Evidence
-- Investigation timeline
-- Screenshots
-- Final incident report
-- Comprehensive README
+[Final Incident Report](IOC_Report/Final_Incident_Report.md)
 
 ---
 
 # Repository Structure
 
-```text
+```
 Windows-Event-Investigation-Lab
 │
 ├── Event_Analysis
@@ -413,30 +417,76 @@ Windows-Event-Investigation-Lab
 
 ---
 
-# Key Takeaways
+# Skills Demonstrated
 
-This lab demonstrates practical SOC skills including Windows log analysis, authentication investigations, network reconnaissance, event correlation, IOC collection, and technical documentation. It reflects a structured approach to investigating Windows security events in a controlled environment and highlights the importance of combining host-based evidence with network activity to understand potential security incidents.
+- Windows Security Event Analysis
+- SOC Investigation Methodology
+- Authentication Monitoring
+- Network Enumeration
+- SMB Investigation
+- Privilege Escalation Detection
+- IOC Collection
+- Incident Response
+- Threat Investigation
+- MITRE ATT&CK Mapping
+- Technical Documentation
+- Git & GitHub
+
+---
+
+# Key Findings
+
+- Investigated multiple Windows Security Events generated from simulated attack scenarios.
+- Identified failed and successful authentication activities.
+- Detected account creation activity.
+- Verified privilege escalation through administrator group modification.
+- Performed SMB enumeration from Kali Linux.
+- Correlated network activity with Windows Security Logs.
+- Produced a complete SOC-style incident investigation report.
+
+---
+
+# Learning Outcomes
+
+This project improved practical skills in:
+
+- Windows Event Log analysis
+- Security monitoring
+- Authentication investigation
+- Endpoint investigation
+- Network attack analysis
+- IOC identification
+- Incident documentation
+- Blue Team operations
 
 ---
 
 # Future Improvements
 
-- Deploy Sysmon for enhanced endpoint telemetry.
-- Integrate Windows logs with Wazuh SIEM.
-- Develop Sigma detection rules.
-- Build Splunk dashboards for authentication monitoring.
-- Expand the lab with Active Directory and lateral movement detection scenarios.
+Future improvements include:
+
+- Deploy Sysmon for enhanced endpoint visibility.
+- Forward Windows logs into Wazuh SIEM.
+- Create Sigma detection rules.
+- Build Splunk dashboards.
+- Simulate Active Directory attacks.
+- Add lateral movement detection scenarios.
 
 ---
 
 # Author
 
-**Joseph Abidoye**
+## Joseph Abidoye
 
 SOC Analyst | Blue Team | Threat Detection | Incident Response | Windows Security | Network Security
 
-- **GitHub:** https://github.com/iamtimofe/Joseph-Abidoye-Cybersecurity-Portfolio
-- **LinkedIn:** *(Add your LinkedIn profile URL)*
+GitHub:
+
+https://github.com/iamtimofe/Joseph-Abidoye-Cybersecurity-Portfolio
+
+LinkedIn:
+
+*(https://www.linkedin.com/in/joseph-abidoye-209991b0/)*
 
 ---
 
