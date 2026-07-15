@@ -1,0 +1,26 @@
+===========================================
+Network Reconnaissance
+===========================================
+
+Date: July 2026
+
+Target Host:
+192.168.100.10
+
+Source:
+192.168.100.20 (Kali Linux)
+
+Services Discovered
+
+445/tcp
+Status: Open
+Service: microsoft-ds (SMB)
+
+5985/tcp
+Status: Open
+Service: Windows Remote Management (WinRM)
+
+Assessment
+
+The Windows Server is reachable over the isolated lab network.
+SMB and WinRM services are available, allowing remote management and authentication.

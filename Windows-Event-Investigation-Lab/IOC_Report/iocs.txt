@@ -1,0 +1,103 @@
+===========================================
+Windows Security Event Investigation
+IOC REPORT
+===========================================
+
+Investigator: Joseph Abidoye
+Case ID: WIN-001
+Date: July 2026
+
+===========================================
+Event 1 - Failed Logon
+===========================================
+
+Event ID: 4625
+Event Name: Failed Logon
+Target Account: Administrator
+Source IP: 127.0.0.1
+Workstation: WIN-OBNND2CCKKS
+Failure Reason: Unknown user name or bad password
+Status: 0xC000006D
+Sub Status: 0xC000006A
+Authentication Package: Negotiate
+
+Assessment:
+Expected lab activity. In a production environment, multiple failed logons from the same source may indicate brute-force or password-spraying attacks.
+
+===========================================
+Event 2 - Successful Service Logon
+===========================================
+
+Event ID: 4624
+Logon Type: 5
+Account: SYSTEM
+Domain: NT AUTHORITY
+Authentication Package: Negotiate
+Process: services.exe
+
+Assessment:
+Legitimate Windows service authentication. No suspicious activity observed.
+
+===========================================
+Event 3 - User Account Creation
+===========================================
+
+Event ID: 4720
+Created By: Administrator
+New User: SOC_Analyst
+Account Type: Normal Account
+Account Status: Disabled
+
+Assessment:
+Expected administrative activity performed during the lab. Unexpected account creation in a production environment should be investigated immediately.
+
+===========================================
+Overall Findings
+===========================================
+
+• Failed authentication successfully detected.
+• Successful Windows service authentication observed.
+• User account creation successfully audited.
+• Windows Security logs provided sufficient evidence for investigation.
+
+
+===========================================
+Event 4 - Privilege Escalation
+===========================================
+
+Event ID: 4732
+Action: User Added to Local Administrators Group
+Performed By: Administrator
+Affected Account: SOC_Analyst
+Target Group: Administrators
+
+MITRE ATT&CK:
+- T1098 - Account Manipulation
+- T1078 - Valid Accounts
+
+Assessment:
+Expected administrative activity performed during the lab. In a production environment, this event should be reviewed immediately to verify that the privilege assignment was authorized.
+
+
+===========================================
+Event 5 - Failed SMB Authentication
+===========================================
+
+Event ID: 4625
+Source IP: 192.168.100.20
+Target Account: Administrator
+Logon Type: 3 (Network)
+Authentication: NTLM
+
+Status:
+0xC000006D
+
+Sub Status:
+0xC000006A
+
+MITRE ATT&CK:
+- T1110 - Brute Force
+- T1110.001 - Password Guessing
+
+Assessment:
+Repeated failed network logon attempts from the same source may indicate a brute-force attack and should be investigated.

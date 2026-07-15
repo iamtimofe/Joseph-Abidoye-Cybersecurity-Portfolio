@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux editor backups
+*~
+
+# Vim swap files
+*.swp
+
+# Python cache
+__pycache__/
+
+# Virtual environments
+venv/
+.env
