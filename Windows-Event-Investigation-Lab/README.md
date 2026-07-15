@@ -586,10 +586,6 @@ GitHub:
 
 https://github.com/iamtimofe/Joseph-Abidoye-Cybersecurity-Portfolio
 
-LinkedIn:
-
-*(Add your LinkedIn profile URL)*
-
 ---
 
 # License
