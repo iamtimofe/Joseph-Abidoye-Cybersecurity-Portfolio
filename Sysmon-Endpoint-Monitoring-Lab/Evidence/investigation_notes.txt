@@ -1,0 +1,37 @@
+Sysmon Endpoint Monitoring Investigation Notes
+
+Environment
+-----------
+OS: Windows Server 2022
+Monitoring Tool: Microsoft Sysmon
+Configuration: SwiftOnSecurity Sysmon Config
+Hypervisor: Oracle VirtualBox
+
+Events Investigated
+-------------------
+Event ID 1 - Process Creation
+Event ID 3 - Network Connection
+Event ID 11 - File Creation
+Event ID 22 - DNS Query
+
+Objectives
+----------
+- Install Sysmon
+- Configure monitoring
+- Generate endpoint activity
+- Collect telemetry
+- Investigate events
+- Document findings
+
+Evidence Collected
+------------------
+- Event Viewer screenshots
+- Sysmon Operational Logs
+- DNS Query events
+- Network Connection events
+- File Creation events
+- Process Creation events
+
+Investigation Status
+--------------------
+Completed Successfully

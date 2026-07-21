@@ -1,0 +1,27 @@
+Microsoft Sysmon Installation
+
+Downloaded:
+Sysmon64.exe
+
+Configuration:
+sysmonconfig-export.xml
+
+Installation Command
+
+Sysmon64.exe -accepteula -i sysmonconfig-export.xml
+
+Verification
+
+sc query sysmon64
+
+Result
+
+Sysmon installed successfully.
+
+Log Location
+
+Applications and Services Logs
+Microsoft
+Windows
+Sysmon
+Operational

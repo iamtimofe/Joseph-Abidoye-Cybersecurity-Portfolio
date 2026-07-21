@@ -1,0 +1,33 @@
+Commands Used During Investigation
+
+Sysmon Installation
+-------------------
+Sysmon64.exe -accepteula -i sysmonconfig-export.xml
+
+Verify Installation
+-------------------
+sc query sysmon64
+
+Generate DNS Query
+------------------
+nslookup github.com
+
+Generate Network Activity
+-------------------------
+ping github.com
+
+Generate File Creation
+----------------------
+Download sysmonconfig-export.xml using Google Chrome
+
+View Logs
+---------
+eventvwr.msc
+
+Navigate To
+-----------
+Applications and Services Logs
+Microsoft
+Windows
+Sysmon
+Operational

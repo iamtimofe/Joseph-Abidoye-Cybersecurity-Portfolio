@@ -1,0 +1,39 @@
+Indicators of Compromise (IOCs)
+
+Processes
+---------
+chrome.exe
+cmd.exe
+powershell.exe
+nslookup.exe
+
+Files
+-----
+sysmonconfig-export.xml
+Zone.Identifier
+
+Event IDs
+---------
+1
+3
+11
+22
+
+Artifacts
+---------
+Process GUID
+Process ID
+Command Line
+Target Filename
+DNS Query
+Destination IP
+User Account
+UTC Time
+
+Monitoring Source
+-----------------
+Microsoft-Windows-Sysmon/Operational
+
+Host
+----
+Windows Server 2022
