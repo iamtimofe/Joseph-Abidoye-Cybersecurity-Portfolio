@@ -23,36 +23,38 @@ This timeline summarizes the sequence of activities performed during the Sysmon 
 
 ## Investigation Flow
 
+```text
 Install Sysmon
-│
-▼
+      │
+      ▼
 Import Configuration
-│
-▼
+      │
+      ▼
 Generate Endpoint Activity
-│
-├──────────────┐
-▼ ▼
-Processes Network Traffic
-(Event 1) (Event 3)
-│ │
-└──────┬───────┘
-▼
-DNS Queries
-(Event 22)
-│
-▼
-File Download
-(Event 11)
-│
-▼
-Event Investigation
-│
-▼
-IOC Collection
-│
-▼
-Final Incident Report
+      │
+      ├──────────────┐
+      ▼              ▼
+  Processes     Network Traffic
+  (Event 1)        (Event 3)
+      │              │
+      └──────┬───────┘
+             ▼
+        DNS Queries
+        (Event 22)
+             │
+             ▼
+        File Download
+        (Event 11)
+             │
+             ▼
+      Event Investigation
+             │
+             ▼
+       IOC Collection
+             │
+             ▼
+     Final Incident Report
+```
 
 ---
 
