@@ -124,7 +124,6 @@ The following screenshots document each stage of the investigation.
 | `02_network_connection.png` | Sysmon Event ID 3 – Network Connection |
 | `03_file_creation.png` | Sysmon Event ID 11 – File Creation |
 | `04_dns_query.png` | Sysmon Event ID 22 – DNS Query |
-| `05_sysmon_installation.png` | Successful Sysmon Installation |
 
 > All screenshots are located in the `Screenshots/` directory.
 
