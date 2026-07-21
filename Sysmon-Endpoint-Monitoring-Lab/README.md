@@ -3,20 +3,16 @@
 <p align="center">
 
 ![Windows Server](https://img.shields.io/badge/Windows%20Server-2022-blue?style=for-the-badge&logo=windows)
-
 ![Sysmon](https://img.shields.io/badge/Microsoft-Sysmon-red?style=for-the-badge&logo=microsoft)
-
 ![Threat Hunting](https://img.shields.io/badge/Threat-Hunting-success?style=for-the-badge)
-
 ![SOC](https://img.shields.io/badge/SOC-Analyst-blueviolet?style=for-the-badge)
-
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-orange?style=for-the-badge)
 
 </p>
 
 ---
 
-# 📖 Executive Summary
+## 📖 Executive Summary
 
 This project demonstrates how Microsoft Sysmon can be deployed to enhance endpoint visibility on a Windows Server 2022 system.
 
@@ -28,7 +24,7 @@ The project documents the investigation process, collected evidence, Indicators 
 
 ---
 
-# 🎯 Objectives
+## 🎯 Objectives
 
 The primary objectives of this lab were to:
 
@@ -45,32 +41,35 @@ The primary objectives of this lab were to:
 
 ---
 
-# 🏗️ Lab Architecture
+## 🏗️ Lab Architecture
 
 ```text
                     +----------------------+
                     |  Kali Linux Analyst  |
-                    | Investigation Notes  |
+                    |  Investigation Notes |
                     +----------+-----------+
                                |
                                |
-                    Event Investigation
+                        Event Investigation
                                |
                                ▼
-+---------------------------------------------------------+
-|             Windows Server 2022 Endpoint                |
-|---------------------------------------------------------|
-|                                                         |
-| Microsoft Sysmon                                        |
-|                                                         |
-|  • Event ID 1  - Process Creation                       |
-|  • Event ID 3  - Network Connection                     |
-|  • Event ID 11 - File Creation                          |
-|  • Event ID 22 - DNS Queries                            |
-|                                                         |
-+--------------------------------------------------------- 
++-----------------------------------------------------------+
+|              Windows Server 2022 Endpoint                 |
+|-------------------------------------------------------------|
+|                                                             |
+|  Microsoft Sysmon                                          |
+|                                                             |
+|   • Event ID 1  - Process Creation                         |
+|   • Event ID 3  - Network Connection                       |
+|   • Event ID 11 - File Creation                            |
+|   • Event ID 22 - DNS Queries                               |
+|                                                             |
++-------------------------------------------------------------+
+```
 
-# 🔍 Event Analysis
+---
+
+## 🔍 Event Analysis
 
 The following Sysmon events were generated, collected, and analyzed during this investigation.
 
@@ -88,7 +87,7 @@ Additional documentation:
 
 ---
 
-# 📑 Indicators of Compromise (IOCs)
+## 📑 Indicators of Compromise (IOCs)
 
 The investigation collected multiple Indicators of Compromise that can be used during threat hunting and incident response.
 
@@ -115,7 +114,7 @@ Final investigation report:
 
 ---
 
-# 🖼️ Evidence & Screenshots
+## 🖼️ Evidence & Screenshots
 
 The following screenshots document each stage of the investigation.
 
@@ -131,7 +130,7 @@ The following screenshots document each stage of the investigation.
 
 ---
 
-# 🧩 MITRE ATT&CK Mapping
+## 🧩 MITRE ATT&CK Mapping
 
 | Sysmon Event | ATT&CK Technique | Description |
 |--------------|------------------|-------------|
@@ -142,7 +141,7 @@ The following screenshots document each stage of the investigation.
 
 ---
 
-# 📈 Investigation Summary
+## 📈 Investigation Summary
 
 The investigation confirmed that Microsoft Sysmon successfully captured endpoint telemetry across multiple categories of activity.
 
@@ -163,7 +162,7 @@ The investigation confirmed that Microsoft Sysmon successfully captured endpoint
 
 ---
 
-# 📊 Skills Demonstrated During This Lab
+## 📊 Skills Demonstrated During This Lab
 
 - Windows Endpoint Monitoring
 - Sysmon Deployment & Configuration
@@ -180,7 +179,7 @@ The investigation confirmed that Microsoft Sysmon successfully captured endpoint
 
 ---
 
-# 🚧 Challenges Encountered
+## 🚧 Challenges Encountered
 
 During this lab, several technical challenges were encountered while configuring and validating Sysmon.
 
@@ -193,7 +192,7 @@ During this lab, several technical challenges were encountered while configuring
 
 ---
 
-# 📚 Lessons Learned
+## 📚 Lessons Learned
 
 This project reinforced several key SOC analyst concepts:
 
@@ -204,7 +203,7 @@ This project reinforced several key SOC analyst concepts:
 
 ---
 
-# 🚀 Future Improvements
+## 🚀 Future Improvements
 
 This project will be expanded by integrating Sysmon logs into additional security platforms and creating custom detections.
 
@@ -218,11 +217,9 @@ Planned enhancements include:
 - Simulate malware execution in a safe lab environment
 - Create additional investigations covering persistence, privilege escalation, and lateral movement
 
-
 ---
 
-
-# 👨🏽‍💻 Author
+## 👨🏽‍💻 Author
 
 **Joseph Abidoye**
 
@@ -237,13 +234,13 @@ Aspiring SOC Analyst with a strong focus on:
 - SIEM Technologies
 - Incident Response
 
-## Connect with Me
+### Connect with Me
 
 - GitHub: **https://github.com/iamtimofe**
 
 ---
 
-# ⭐ Key Takeaways
+## ⭐ Key Takeaways
 
 This project demonstrates practical experience with:
 
@@ -259,7 +256,8 @@ This project demonstrates practical experience with:
 The investigation follows a structured workflow similar to that used by Security Operations Center (SOC) analysts during endpoint investigations and incident response.
 
 ---
-# 🏛️ NIST Cybersecurity Framework Mapping
+
+## 🏛️ NIST Cybersecurity Framework Mapping
 
 This project aligns with the NIST Cybersecurity Framework (CSF) 2.0 by demonstrating practical endpoint monitoring, detection, and incident analysis.
 
